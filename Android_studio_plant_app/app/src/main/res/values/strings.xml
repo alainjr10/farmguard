@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Android_studio_plant_app</string>
+    <string name="firstButton">Button1</string>
+    <string name="secondButton">Button2</string>
+</resources>

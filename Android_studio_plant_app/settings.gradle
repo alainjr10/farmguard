@@ -1,0 +1,20 @@
+include ':app'                                    // assumed existing content
+setBinding(new Binding([gradle: this]))                                // new
+evaluate(new File(                                                     // new
+        settingsDir.parentFile,                                              // new
+        'plant_app_flutter/.android/include_flutter.groovy'                         // new
+))
+
+include ':app'
+rootProject.name = "Android_studio_plant_app"
+
+include ':app' // assumed existing content
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+        settingsDir.parentFile,
+        'plant_app_flutter/.android/include_flutter.groovy'
+))
+include ':plant_app_flutter'
+project(':plant_app_flutter').projectDir = new File('../plant_app_flutter')
+
+
