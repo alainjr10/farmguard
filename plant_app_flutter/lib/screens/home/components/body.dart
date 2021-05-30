@@ -57,7 +57,9 @@ class Body extends StatelessWidget {
                               foregroundColor: MaterialStateProperty.all<Color>(
                                   Colors.white),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/dashboard');
+                            },
                             child: Padding(
                               padding: const EdgeInsets.all(3.0),
                               child: Text(
