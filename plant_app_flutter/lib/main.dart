@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app_flutter/constants.dart';
 import 'package:plant_app_flutter/screens/dashboard/dashboard_screen.dart';
+import 'package:plant_app_flutter/screens/get_plot/get_plot.dart';
 import 'package:plant_app_flutter/screens/home/home_screen.dart';
 
 void main() {
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => HomeScreen(),
-        '/dashboard': (contect) => DashboardScreen(),
+        '/dashboard': (context) => DashboardScreen(),
+        '/get_plot': (context) => GetPlot(),
       },
       debugShowCheckedModeBanner: false,
       title: 'Farm Guard',

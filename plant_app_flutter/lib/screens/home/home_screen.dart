@@ -2,7 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:plant_app_flutter/screens/dashboard/dashboard_screen.dart';
+import 'package:plant_app_flutter/screens/forum/forum.dart';
+import 'package:plant_app_flutter/screens/hire/hire_workers.dart';
 import 'package:plant_app_flutter/screens/home/components/homepage.dart';
+import 'package:plant_app_flutter/screens/pests/pests_and_diseases.dart';
 
 import '../../../constants.dart';
 
@@ -15,28 +18,12 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   final List _widgetOptions = [
     HomePageWidget(),
-    //Body(),
     DashboardScreen(),
-    Center(
-      child: Text(
-        'Index 2: School',
-        style: optionStyle,
-      ),
-    ),
-    Center(
-      child: Text(
-        'Index 1: Business',
-        style: optionStyle,
-      ),
-    ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+    PestsAndDiseaases(),
+    HireWorkers(),
+    Forum(),
   ];
 
   void _onItemTapped(int index) {

@@ -118,7 +118,7 @@ class Body extends StatelessWidget {
                       ),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
+                      padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
                       child: Column(
                         children: [
                           Row(
@@ -167,10 +167,15 @@ class Body extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              SingleMenuItem(
-                                anIcon: Icons.terrain_outlined,
-                                iconCaption: 'Consult/Get a Plot',
-                                iconColour: Colors.teal.shade100,
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.pushNamed(context, '/get_plot');
+                                },
+                                child: SingleMenuItem(
+                                  anIcon: Icons.terrain_outlined,
+                                  iconCaption: 'Consult/Get a Plot',
+                                  iconColour: Colors.teal.shade100,
+                                ),
                               ),
                               SingleMenuItem(
                                 anIcon: Icons.local_library_outlined,
