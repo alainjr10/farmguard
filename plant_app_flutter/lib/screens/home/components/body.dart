@@ -147,13 +147,19 @@ class Body extends StatelessWidget {
                             children: [
                               SingleMenuItem(
                                 anIcon: Icons.forum_outlined,
-                                iconCaption: 'Forum/Discussion',
+                                iconCaption: 'Forum and \n Discussion',
                                 iconColour: Colors.teal.shade300,
                               ),
-                              SingleMenuItem(
-                                anIcon: Icons.shop_two_outlined,
-                                iconCaption: 'Shop Products and Equipments',
-                                iconColour: Colors.orange.shade300,
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.pushNamed(context, '/shop');
+                                },
+                                child: SingleMenuItem(
+                                  anIcon: Icons.shop_two_outlined,
+                                  iconCaption:
+                                      'Shop Products \n and Equipments',
+                                  iconColour: Colors.orange.shade300,
+                                ),
                               ),
                               SingleMenuItem(
                                 anIcon: Icons.work_outline,
@@ -205,13 +211,16 @@ class Body extends StatelessWidget {
 }
 
 class SingleMenuItem extends StatelessWidget {
-  const SingleMenuItem(
-      {required this.anIcon,
-      required this.iconCaption,
-      required this.iconColour});
+  const SingleMenuItem({
+    required this.anIcon,
+    required this.iconCaption,
+    required this.iconColour,
+    //required this.onMenuTapped,
+  });
   final IconData anIcon;
   final String iconCaption;
   final Color iconColour;
+  //final Function onMenuTapped;
 
   @override
   Widget build(BuildContext context) {

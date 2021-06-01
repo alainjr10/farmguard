@@ -3,6 +3,7 @@ import 'package:plant_app_flutter/constants.dart';
 import 'package:plant_app_flutter/screens/dashboard/dashboard_screen.dart';
 import 'package:plant_app_flutter/screens/get_plot/get_plot.dart';
 import 'package:plant_app_flutter/screens/home/home_screen.dart';
+import 'package:plant_app_flutter/screens/shop/shop.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => HomeScreen(),
         '/dashboard': (context) => DashboardScreen(),
         '/get_plot': (context) => GetPlot(),
+        '/shop': (context) => Shop(),
       },
       debugShowCheckedModeBanner: false,
       title: 'Farm Guard',
