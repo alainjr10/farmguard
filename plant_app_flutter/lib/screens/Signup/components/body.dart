@@ -7,9 +7,16 @@ import 'package:plant_app_flutter/components/already_have_an_account_acheck.dart
 import 'package:plant_app_flutter/components/rounded_button.dart';
 import 'package:plant_app_flutter/components/rounded_input_field.dart';
 import 'package:plant_app_flutter/components/rounded_password_field.dart';
+import 'package:dropdownfield/dropdownfield.dart';
 import 'package:flutter_svg/svg.dart';
 
-class Body extends StatelessWidget {
+class Body extends StatefulWidget {
+  @override
+  _BodyState createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
+  String dropdownValue = "Sign up as";
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -18,6 +25,29 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            DropdownButton<String>(
+              value: dropdownValue,
+              icon: const Icon(Icons.arrow_downward),
+              iconSize: 24,
+              elevation: 16,
+              style: const TextStyle(color: Colors.deepPurple),
+              underline: Container(
+                height: 2,
+                color: Colors.deepPurpleAccent,
+              ),
+              onChanged: (String? newValue) {
+                setState(() {
+                  dropdownValue = newValue!;
+                });
+              },
+              items: <String>['One', 'Two', 'Free', 'Four']
+                  .map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+            ),
             Text(
               "SIGNUP",
               style: TextStyle(fontWeight: FontWeight.bold),
@@ -25,7 +55,11 @@ class Body extends StatelessWidget {
             SizedBox(height: size.height * 0.03),
             SvgPicture.asset(
               "assets/icons/signup.svg",
-              height: size.height * 0.35,
+              height: size.height * 0.20,
+            ),
+            RoundedInputField(
+              hintText: "Your Full Names",
+              onChanged: (value) {},
             ),
             RoundedInputField(
               hintText: "Your Email",
