@@ -79,24 +79,25 @@ class GetPlot extends StatelessWidget {
                       horizontal: 6.0,
                     ),
                     decoration: BoxDecoration(
-                        border: Border(
-                          top: BorderSide(width: 8.0, color: Colors.white),
-                          bottom: BorderSide(
-                              width: 1.0, color: Colors.grey.shade300),
-                          left: BorderSide(width: 2.0, color: Colors.white),
-                          right: BorderSide(
-                              width: 1.0, color: Colors.grey.shade300),
-                        ),
-                        //borderRadius: BorderRadius.all(Radius.circular(15)),
-                        color: kBackgroundColor2,
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 3.0,
-                            offset: Offset(1.0, 2.0),
-                            color: Colors.grey.shade300,
-                            spreadRadius: 2.0,
-                          )
-                        ]),
+                      border: Border(
+                        top: BorderSide(width: 8.0, color: Colors.white),
+                        bottom:
+                            BorderSide(width: 1.0, color: Colors.grey.shade300),
+                        left: BorderSide(width: 2.0, color: Colors.white),
+                        right:
+                            BorderSide(width: 1.0, color: Colors.grey.shade300),
+                      ),
+                      //borderRadius: BorderRadius.all(Radius.circular(15)),
+                      color: kBackgroundColor2,
+                      boxShadow: [
+                        BoxShadow(
+                          blurRadius: 3.0,
+                          offset: Offset(1.0, 2.0),
+                          color: Colors.grey.shade300,
+                          spreadRadius: 2.0,
+                        )
+                      ],
+                    ),
                     height: 115,
                     child: Row(
                       //verticalDirection: VerticalDirection.down,
