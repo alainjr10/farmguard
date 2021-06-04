@@ -4,7 +4,6 @@ import 'package:plant_app_flutter/screens/Signup/sign_screen.dart';
 import 'package:plant_app_flutter/components/rounded_button.dart';
 import 'background.dart';
 import 'package:plant_app_flutter/constants.dart';
-import 'package:flutter_svg/svg.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -21,11 +20,10 @@ class Body extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             SizedBox(height: size.height * 0.05),
-            SvgPicture.asset(
-              "assets/icons/chat.svg",
-              height: size.height * 0.45,
-            ),
-            SizedBox(height: size.height * 0.05),
+            // SvgPicture.asset(
+            //   "assets/icons/chat.svg",
+            //   height: size.height * 0.45,
+            // ),
             RoundedButton(
               text: "LOGIN",
               press: () {

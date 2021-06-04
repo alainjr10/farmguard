@@ -1,3 +1,6 @@
+// @dart=2.9
+
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:plant_app_flutter/constants.dart';
 import 'package:plant_app_flutter/screens/Welcome/welcome_screen.dart';
@@ -6,7 +9,9 @@ import 'package:plant_app_flutter/screens/get_plot/get_plot.dart';
 import 'package:plant_app_flutter/screens/home/home_screen.dart';
 import 'package:plant_app_flutter/screens/shop/shop.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
